@@ -1,0 +1,9 @@
+{
+  "name": "docker-101",
+  "version": "1.0.0",
+  "description": "Hello docker",
+  "main": "index.js",
+  "repository": "https://github.com/mimi4Real/docker-101.git",
+  "author": "mimi4Real <706649059@qq.com>",
+  "license": "MIT"
+}
