@@ -1,0 +1,5 @@
+FROM node:12.18.2
+WORKDIR /app
+ENV PORT 80
+COPY . .
+RUN yarn
