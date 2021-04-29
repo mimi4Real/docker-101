@@ -1,0 +1,29 @@
+version: "3.7"
+
+services:
+  app:
+    image: nginx
+    volumes:
+      - ./frontend/dist:/usr/share/nginx/html/
+      - ./nginx:/etc/nginx/conf.d
+    ports:
+      - 8080:80
+    networks:
+      - network_a
+
+  server:
+    image: node:12.18.1
+    command: sh -c "yarn install && yarn start"
+    volumes:
+      - ./server:/usr/src/server
+    working_dir: /usr/src/server
+    ports:
+      - 8888:3000
+    networks:
+      - network_b
+
+networks:
+  network_a:
+    driver: bridge
+  network_b:
+    driver: bridge
