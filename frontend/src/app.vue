@@ -16,7 +16,6 @@ export default {
   },
   created() {
     axios.get("/api/docker").then((res) => {
-      console.log(res.data);
       this.serverMsg = res.data;
     });
   }
@@ -25,7 +24,7 @@ export default {
 <style >
 .test{
   color:#020202;
-  font-size:18px;
+  font-size:22px;
 }
 .server-mag{
   color: #020202;

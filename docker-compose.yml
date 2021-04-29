@@ -21,9 +21,8 @@ services:
       - 8888:3000
     networks:
       - network_b
+      - network_a
 
 networks:
   network_a:
-    driver: bridge
   network_b:
-    driver: bridge
